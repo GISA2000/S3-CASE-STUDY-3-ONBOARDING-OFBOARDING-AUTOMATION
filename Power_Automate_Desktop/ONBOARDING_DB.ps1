@@ -1,0 +1,2 @@
+# ACCESS PYTHON SCRIPT TO INSERT USER INTO HR DATABASE AND PASSES VARIABLES FROM PAD TO PYTHON SCRIPT
+python "C:\Python\ITS_HR_DB\INSERT_USER.py" "%Employee_First_Name%" "%Employee_Last_Name%" "%Employee_Date_Of_Birth%" "%Employee_Adress%" "%Employee_Place%" "%Employee_Postal_Code%" "%Employee_Start_Of_Employment%" "%Employee_Function%" "%EMPLOYEE_DEPARTMENT%" "%Employee_Location%" "%Employee_Phone_Number%"
