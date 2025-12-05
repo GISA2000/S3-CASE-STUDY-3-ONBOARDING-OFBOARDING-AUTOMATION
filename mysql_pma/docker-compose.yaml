@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  SRV-DB:
+    image: mysql:latest
+    container_name: GM-SRV-DB
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - "FILL IN WHERE THE VOLUME MUST BE SAVED OUTSIDE THE CONTAINER" # Data van DB koppelen aan schijf op fysieke machine. Pas de volume map aan naar jouw gewenste locatie.
+    networks:
+      - PUT_YOUR_NETWORK_NAME_HERE
+  apache-phpmyadmin:
+    image: php:apache
+    container_name: apache_phpmyadmin
+    restart: unless-stopped
+    volumes:
+      - ./www:/var/www/html
+    ports:
+      - "8081:80"
+      - "8443:443"
+    depends_on:
+      - SRV-DB
+    networks:
+      - PUT_YOUR_NETWORK_NAME_HERE
+
+  srv-web:
+    build: .
+    container_name: GM-SRV-WEB
+    restart: unless-stopped
+    environment:
+      PMA_HOST: SRV-DB
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      
+    ports:
+      - "443:443"
+    depends_on:
+      - SRV-DB
+    networks:
+      - PUT_YOUR_NETWORK_NAME_HERE
+
+networks:
+  PUT_YOUR_NETWORK_NAME_HERE:
+    external: true #Verteld docker om een bestaand netwerk te gebruiken, maak het netwerk eerst aan met 'docker network create PUT_YOUR_NETWORK_NAME_HERE'
+
+
+
+
+
