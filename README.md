@@ -1,2 +1,4 @@
 # S3-CASE-STUDY-3-ONBOARDING-OFBOARDING-AUTOMATION-
 PYTHON AND POWERAUTOMATE CODE THAT IS BEING USED TO AUTOMATE AD AND MYSQL DB.
+
+ <img width="429" height="218" alt="image" src="https://github.com/user-attachments/assets/8a7e8f46-bec5-48f8-b20c-15293799e98e" />
