@@ -13,11 +13,15 @@ PHPMYADMIN SETUP STEPS
 DO THE FOLLOWING TO MAKE SURE THE PYTHON SCRIPTS ARE WORKING:
 
 1. INSTALL PYTHON,
-2. INSTALL THE LIBARY'S WITH THIS COMMAND "pip install -r .\requirements.txt" 
-3. CREATE AN ".env" FILE AND CONFIGURE IT LIKE SO
+2. INSTALL THE LIBARY'S WITH THE COMMAND BELOW
+   bash
+4. ``` Python
+   pip install -r .\requirements.txt
+   ```
+5. CREATE AN ".env" FILE AND CONFIGURE IT LIKE SO
 <img width="338" height="98" alt="image" src="https://github.com/user-attachments/assets/38ad74d1-c0ea-465e-ba4e-54c5f523ff40" />
 
-4. THE SCRIPTS MUST WORK KNOW 
+6. THE SCRIPTS MUST WORK KNOW 
 
 
 
