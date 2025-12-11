@@ -14,7 +14,7 @@ DO THE FOLLOWING TO MAKE SURE THE PYTHON SCRIPTS ARE WORKING:
 
 1. INSTALL PYTHON,
 2. INSTALL THE LIBARY'S WITH THE COMMAND BELOW
-   bash
+   
 4. ``` python
    pip install -r .\requirements.txt
    ```
